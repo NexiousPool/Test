@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    link rel="shortcut icon" href="/favicon.ico"
+    = include_gon
+    link href="/css/style.css" rel="stylesheet"
+    link href="/css/landing.css" rel="stylesheet"
+    = javascript_include_tag "application"
+    = render 'shared/html5'
+    = render 'shared/meta'
+    = csrf_meta_tags
+  body
+    .landing-wraper
+      = yield

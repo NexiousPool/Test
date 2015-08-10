@@ -1,0 +1,39 @@
+.navbar.navbar-static-top
+  .navbar-inner
+    .container
+      a#main_nav_btn.btn.btn-navbar data-target=".nav-collapse" data-toggle="collapse"
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.brand href="/" onclick=""
+        img alt="Nexious" src="https://www.coinbase.com/assets/logos/logo-inverse@2x-e2180eeb9d144af5e71c9542140f0680454a8b7b53c8051451b0630f6d71be65.png" /
+      .mobile-bg
+      #application_menu.nav-collapse
+        ul.nav.clearfix
+          li
+            a href="/markets/btcnzd" target="_blank"  TRADE
+          li
+            a href="/exchange_assets" target="_blank"  ASSETS
+          - if current_user
+            li
+              a href="/funds" target="_blank"  FUNDS
+            li
+              a href="/history" target="_blank"  HISTORY
+            li#resources_menu.dropdown.dropdown-hover
+              a.dropdown-toggle data-toggle="dropdown" href="#"
+                | Products
+                b.caret
+              ul.dropdown-menu.fadeIn.animated-fast aria-labelledby="dLabel" role="menu"
+                li.home
+                  a href="/home"  Buy/Sell Bitcoin
+                li
+                a.external-link href="https://exchange.coinbase.com"  Exchange
+                li
+                  a.external-link href="https://developers.coinbase.com"  Developer Platform
+          - else
+            ul.nav.clearfix
+              li.active.signin
+                a href="/signin"  SIGN IN
+              li.signup style="margin-top:-1px"
+                a.btn href="/signup"  REGISTER
+

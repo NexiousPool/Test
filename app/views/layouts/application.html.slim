@@ -1,0 +1,26 @@
+doctype html
+html lang="en"
+  head
+    link href="/favicon.ico" rel="shortcut icon"
+    = include_gon
+    link href="/css/core.css" rel="stylesheet"
+    link href="/css/application.css" rel="stylesheet"
+    link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"
+    = javascript_include_tag "application"
+    = yield(:scripts) if content_for?(:scripts)
+    = render 'shared/html5'
+    = render 'shared/meta'
+    = csrf_meta_tags
+
+body.app.sessions
+  .page-container
+    - if content_for?(:header)
+      = yield(:header)
+    - else
+      = render 'shared/header'
+    #page.container
+      - if content_for?(:frame)
+        = yield(:frame)
+      - else
+        = render 'shared/frame'
+

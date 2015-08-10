@@ -1,0 +1,14 @@
+- unless browser.modern?
+  .errors.visible data-visible="error-status"
+    .container
+      .row
+        p data-html="error-status"
+          | Error: You are using an unsupported browser, please try:
+            <a href="https://www.google.com/chrome/" class="alert-link">Google Chrome</a>
+
+.errors.visible data-visible="error-status"
+  .container
+    .row
+      p data-html="error-status"
+        | Error: The network connection is temporarily unavailable..
+          <a href="/" class="alert-link"> Please Refresh</a>

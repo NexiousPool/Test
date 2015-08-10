@@ -1,0 +1,15 @@
+.flash
+  -if flash[:notice]
+    .alert.alert-success
+      a.close x
+        span = flash[:notice]
+
+  -if flash[:alert]
+    .alert.alert-danger
+      a.close x
+        span = flash[:notice]
+
+  -if flash[:info]
+    .alert.alert-info
+      a.close x
+        span = flash[:notice]

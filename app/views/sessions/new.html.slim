@@ -1,0 +1,20 @@
+.session
+  .account-form
+    h2
+      | Sign In
+    form#new_identity.form-vertical accept-charset="UTF-8" action="/auth/identity/callback" method="post" novalidate="novalidate"
+      .control-group
+        .controls
+          input#identity_email.focus.text-field name="auth_key" placeholder=("Email Address") type="email"
+      .control-group
+        .controls
+          input#identity_password.text-field name="password" placeholder="Password" type="password"
+      .control-group
+        .controls.clearfix
+          input.btn.btn-default.btn-lg.pull-right.btn data-loading-text="Creating..." name="commit" type="submit" value=("Sign In")
+  .account-extras
+    p
+      a href="/password_resets/new"  Forgot password?
+      | &middot; Don't have an account?
+      a href="/signup"  Sign up
+      br

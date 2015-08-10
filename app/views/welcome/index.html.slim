@@ -1,0 +1,89 @@
+.top-fixed-nav
+  .container
+    .row
+      .col-sm-12
+        h1.logo-small
+          | Nexious Bitcoin Exchange
+        div
+        .navbar-price.visible
+          ul.market-info.clearfix
+            li
+              h4
+                span.market-num
+                  | 420.13
+                    NZD
+                span
+                  | Last Trade Price
+            li
+              h4
+                span.market-num
+                  | +0.01%
+                span
+                  | 24 Hour Change
+            li
+              h4
+                span.market-num
+                  | 1000.1136
+                    BTC
+                span
+                  | 24 Hour Volume
+        .right-nav
+          a href="/markets/btcnzd"  TRADE
+          a href="/exchange_assets"  ASSETS
+          a href="/documents/api_v2"  API
+          - if current_user
+            a href="/settings"  MY PROFILE
+          - else
+            a
+            button.btn.login-small onclick="window.location.href='/signin'" Sign In
+            a
+            button.btn.login-small onclick="window.location.href='/signup'" Register
+  = render 'shared/alert'
+.masthead
+  .container
+    .row
+      .col-sm-12.intro-text
+        .description
+          h2
+            | Fast and Easy Bitcoin Trading
+          p
+            | A Leading New Zealand Bitcoin Trading Platform
+          - if current_user
+            a.btn.login-small.signin_btn href="/markets/btcnzd"  Enter Market
+            a.btn.login-small.signup_btn href="https://pool.nexious.com"  Mining Pool
+          - else
+            a.btn.login-small.signin_btn href="/markets/btcnzd"  Enter Market
+            a.btn.login-small.signup_btn href="/signup"  Create Account
+            br
+            br
+            p
+              | Nexious Mining Pool is also available: <a href="https://pool.nexious.com">Here</a>
+.section.features.clearfix
+  .footer.clearfix
+    .footer-links
+      .container
+        .legal
+          a.brand href="/markets"
+          p
+            | &copy; 2015 Nexious Exchange
+            a href="/documents/terms" target="-blank" Terms & Conditions
+            |  and
+            a href="/documents/security" target="-blank" Security Statement
+        .footer-social
+          ul.press
+            h5 LINKS
+            li.twitt
+              a href="/documents/faq"  ASSETS
+              li
+                a href="/documents/fees"  FEES
+              li
+                a href="/documents/contact"  CONTACT
+          ul
+            h5 HELP
+            li.twitt
+              a href="/documents/faq"  FAQ
+            li
+              a href="/documents/api_v2"  API
+            li
+              a href="/tickets"  SUPPORT
+
